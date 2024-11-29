@@ -3,8 +3,6 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(assignment1_rt)
 
-## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -28,25 +26,6 @@ find_package(catkin REQUIRED COMPONENTS
 
 # Declare the catkin package
 catkin_package()
-
-
-
-
-## Declare a C++ executable for the UI Node
-## Add executables for the nodes
-add_executable(ui_node src/ui_node.cpp)
-target_link_libraries(ui_node ${catkin_LIBRARIES})
-
-add_executable(distance_node src/distance_node.cpp)
-target_link_libraries(distance_node ${catkin_LIBRARIES})
-
-
-
-
-
-
-
-
 # Include directories
 include_directories(
   ${catkin_INCLUDE_DIRS}
