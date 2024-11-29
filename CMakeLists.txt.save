@@ -52,12 +52,17 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+# Add the executables
+add_executable(Node src/Node.cpp)
+target_link_libraries(Node ${catkin_LIBRARIES})
+
+# If you have more nodes, add them similarly
+add_executable(Distance src/Distance.cpp)
+target_link_libraries(Distance ${catkin_LIBRARIES})
 
 
 include_directories(
   ${catkin_INCLUDE_DIRS}
-)
-
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
